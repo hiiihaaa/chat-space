@@ -40,7 +40,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique :true|
-|user_id|integer|null: false|
 
 ###Associstion
 - has_many :groups_users
@@ -66,8 +65,5 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ###Association
-- belongs_to :users
-- belongs_to ;groups
-
-
-
+- belongs_to :user
+- belongs_to ;group
