@@ -6,7 +6,7 @@
     .side-header
       .side-header__box
         %p.side-header__box__user-name
-          = @username
+          ユーザー名
         %ul.side-header__box__menue
           %li
             = link_to "###" do
@@ -23,11 +23,11 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          = @current_group_name
+          現在のグループ名
         %ul.main-header__left-box__member-list
           Member : 
           %li.main-header__left-box__member-list__member
-            = @member_name
+            メンバー名
 
       = link_to "##", class: "main-header__edit-btn" do
         Edit
