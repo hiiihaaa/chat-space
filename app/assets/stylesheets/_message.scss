@@ -2,20 +2,17 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-}
-
 .flash-box{
-  background-color: #38aef0;
+  background-color: $blu;
 }
 
 .notice{
   text-align: center;
-  color: #ffffff;
+  color: $whi;
 }
 
 .chat-side{
-  color: #ffffff;
+  color: $whi;
   width: 300px;
   float: left;
 }
@@ -42,7 +39,7 @@
 }
 
 .btn-icon{
-  color: #ffffff;
+  color: $whi;
   margin-left: 4.8px;
 }
 
@@ -53,21 +50,23 @@
 }
 
 .group{
-  color: #ffffff;
+  color: $whi;
   text-decoration: none;
   margin-bottom: 40px;
   &__group-name{
     font-size: 15px;
+    cursor: pointer;
     margin-bottom:  5px;
   }
   &__latest-message{
     font-size: 11px;
+    cursor: pointer;
   }
 }
 
 .chat-main{
   box-sizing:border-box;
-  background-color: #ffffff;
+  background-color: $whi;
   width: calc(100vw - 300px);
   color: #000000;
   float: left;
@@ -88,7 +87,7 @@
     }    
     &__member-list{
       font-size: 12px;
-      color: #999999;
+      color: $gra;
       display: flex;
       height: 12px;
       margin-top: 15px;
@@ -102,8 +101,8 @@
     line-height: 40px;
     margin-top: 28px;
     padding:0 20px;
-    border: solid 1px #38aef0;
-    color: #38aef0;
+    border: solid 1px $blu;
+    color: $blu;
     text-decoration: none;
   }
 }
@@ -125,7 +124,7 @@
     }
     &__date{
       font-size: 12px;
-      color: #999999;
+      color: $gra;
       margin-left: 10px;
     }
   }
@@ -162,6 +161,7 @@
     line-height: 50px;
     right: 10px;
     position: absolute;
+    cursor: pointer;
   }
 }
 
@@ -170,11 +170,12 @@
   padding:0;
 }
 .submit-btn{
-height: 50px;
-width: 100px;
-text-align: center;
-margin-left: 15px;
-background-color: #38aef0;
-color: #ffffff
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  margin-left: 15px;
+  background-color: $blu;
+  color: $whi;
+  cursor: pointer;
 }
 
