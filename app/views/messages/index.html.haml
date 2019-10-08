@@ -1,0 +1,47 @@
+.flash-box
+  .notice
+    グループを作成しました
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name
+          ユーザー名
+        %ul.side-header__box__menue
+          %li
+            = link_to "###" do
+              = fa_icon 'edit', class: "btn-icon"
+          %li
+            = link_to '###' do
+              = fa_icon 'cog', class: "btn-icon"
+    .groups
+      -# @groups.each do |message|  モデルを作成後追記
+      = link_to "##", class: "group" do
+        = render partial: 'group'
+        
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          現在のグループ名
+        %ul.main-header__left-box__member-list
+          Member : 
+          %li.main-header__left-box__member-list__member
+            メンバー名
+
+      = link_to "##", class: "main-header__edit-btn" do
+        Edit
+    .messages
+      -# @messages.each do |message| モデルを作成後追記
+      = render partial: 'message'
+    .form
+      = form_tag '/', class:  "new_message"  do
+        .input-box
+          %input.input-box__text
+          %label.input-box__image
+            = fa_icon 'image', class: "input-box__image"
+        = submit_tag 'Send', class: "submit-btn"
+
+
+      
+
