@@ -1,15 +1,15 @@
-.flash-box
-  .notice
-    グループを作成しました
+-# .flash-box
+  -# .notice
+    -# グループを作成しました
 .wrapper
   .chat-side
     .side-header
       .side-header__box
         %p.side-header__box__user-name
-          ユーザー名
+          =current_user.name
         %ul.side-header__box__menue
           %li
-            = link_to "###" do
+            = link_to edit_user_path(current_user) do
               = fa_icon 'edit', class: "btn-icon"
           %li
             = link_to '###' do
