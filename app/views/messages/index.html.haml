@@ -9,10 +9,10 @@
           =current_user.name
         %ul.side-header__box__menue
           %li
-            = link_to edit_user_path(current_user) do
+            = link_to new_group_path do
               = fa_icon 'edit', class: "btn-icon"
           %li
-            = link_to '###' do
+            = link_to edit_user_path(current_user) do
               = fa_icon 'cog', class: "btn-icon"
     .groups
       -# @groups.each do |message|  モデルを作成後追記
@@ -29,7 +29,7 @@
           %li.main-header__left-box__member-list__member
             メンバー名
 
-      = link_to "##", class: "main-header__edit-btn" do
+      = link_to "###", class: "main-header__edit-btn" do
         Edit
     .messages
       -# @messages.each do |message| モデルを作成後追記
