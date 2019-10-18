@@ -1,23 +1,26 @@
-.flash-box
-  .notice
-    グループを作成しました
+-# .flash-box
+  -# .notice
+    -# グループを作成しました
 .wrapper
   .chat-side
     .side-header
       .side-header__box
         %p.side-header__box__user-name
-          ユーザー名
+          =current_user.name
         %ul.side-header__box__menue
           %li
-            = link_to "###" do
+            = link_to new_group_path do
               = fa_icon 'edit', class: "btn-icon"
           %li
-            = link_to '###' do
+            = link_to edit_user_path(current_user) do
               = fa_icon 'cog', class: "btn-icon"
     .groups
-      -# @groups.each do |message|  モデルを作成後追記
-      = link_to "##", class: "group" do
-        = render partial: 'group'
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group), class: "group" do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
         
   .chat-main
     .main-header
@@ -29,7 +32,7 @@
           %li.main-header__left-box__member-list__member
             メンバー名
 
-      = link_to "##", class: "main-header__edit-btn" do
+      = link_to "###", class: "main-header__edit-btn" do
         Edit
     .messages
       -# @messages.each do |message| モデルを作成後追記
