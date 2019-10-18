@@ -35,10 +35,9 @@
       = link_to "###", class: "main-header__edit-btn" do
         Edit
     .messages
-      -# @messages.each do |message| モデルを作成後追記
       = render partial: 'message'
     .form
-      = form_tag '/', class:  "new_message"  do
+      = form_tag '/', class:  "new_message" do
         .input-box
           %input.input-box__text
           %label.input-box__image
