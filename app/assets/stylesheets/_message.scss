@@ -11,59 +11,6 @@
   color: $whi;
 }
 
-.chat-side{
-  color: $whi;
-  width: 300px;
-  float: left;
-}
-
-.side-header{
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #253141;
-  height: 100px;
-  padding: 0 20px;
-  &__box{
-    line-height: 100px;
-    display: flex;
-    justify-content: space-between;
-    &__user-name{
-      font-size: 15px;
-      font-weight: bold;
-      display:inline-block;
-    }
-    &__menue{
-    display: flex;
-    }
-  }
-}
-
-.btn-icon{
-  color: $whi;
-  margin-left: 4.8px;
-}
-
-.groups{
-  background-color: #213e51; 
-  height: calc(100vh - 100px);
-  padding: 20px 20px 0;
-}
-
-.group{
-  color: $whi;
-  text-decoration: none;
-  margin-bottom: 40px;
-  &__name{
-    font-size: 15px;
-    cursor: pointer;
-    margin-bottom:  5px;
-  }
-  &__message{
-    font-size: 11px;
-    cursor: pointer;
-  }
-}
-
 .chat-main{
   box-sizing:border-box;
   background-color: $whi;
@@ -115,29 +62,71 @@
 
 .message{
   margin-bottom: 40px;
-  &__upper-info{
-    display: flex;
-    margin-bottom: 10px;
-    &__tolker{
-      font-size: 16px;
-      color: #434a54;
-    }
-    &__date{
-      font-size: 12px;
-      color: $gra;
-      margin-left: 10px;
-    }
-  }
-  &__text{
-    font-size: 14px;
+}
+
+.upper-message{
+  display: flex;
+  margin-bottom: 10px;
+  &__user-name{
+    font-size: 16px;
     color: #434a54;
   }
+  &__date{
+    font-size: 12px;
+    color: $gra;
+    margin-left: 10px;
+  }
 }
+
+.lower-message{
+  font-size: 14px;
+  color: #434a54;
+}
+
 
 .form{
   background-color: #ddd;
   height: 90px;
-  padding: 20px 40px;
+  padding: 20px 50px 20px 40px;
+  &__message{
+    width: calc(100% - 150px);
+    float: left;
+    border: none;
+    height: 50px;
+  }
+  &__mask{
+    background-color: $whi;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    &__image{
+      font-size: 20px;
+      line-height: 50px;
+    }
+    &__hidden{
+      display: none;
+    }
+  }
+  &__submit{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    margin-left: 15px;
+    background-color: $blu;
+    color: $whi;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    padding: 0 30px;
+  }
+}
+
+.icon{
+  font-size: 1.3rem;
+  line-height: 50px;
+  right: 10px;
+ 
+  cursor: pointer;
 }
 
 .new_message{
@@ -169,13 +158,5 @@
   margin: 0;
   padding:0;
 }
-.submit-btn{
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  margin-left: 15px;
-  background-color: $blu;
-  color: $whi;
-  cursor: pointer;
-}
+
 

@@ -1,0 +1,52 @@
+.chat-side{
+  color: $whi;
+  width: 300px;
+  float: left;
+}
+
+.side-header{
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #253141;
+  height: 100px;
+  padding: 0 20px;
+  &__box{
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__user-name{
+      font-size: 15px;
+      font-weight: bold;
+      display:inline-block;
+    }
+    &__menue{
+    display: flex;
+    }
+  }
+}
+
+.btn-icon{
+  color: $whi;
+  margin-left: 4.8px;
+}
+
+.groups{
+  background-color: #213e51; 
+  height: calc(100vh - 100px);
+  padding: 20px 20px 0;
+}
+
+.group{
+  color: $whi;
+  text-decoration: none;
+  margin-bottom: 40px;
+  &__name{
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom:  5px;
+  }
+  &__message{
+    font-size: 11px;
+    cursor: pointer;
+  }
+}
