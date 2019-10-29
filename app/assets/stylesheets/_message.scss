@@ -58,11 +58,13 @@
   height: calc(100vh - 190px);
   background-color: #fafafa;
   padding: 46px 40px;
+  overflow: auto;
 }
 
 .message{
   margin-bottom: 40px;
 }
+
 
 .upper-message{
   display: flex;
@@ -81,8 +83,17 @@
 .lower-message{
   font-size: 14px;
   color: #434a54;
+  &__pict{
+  width: 200px;
+  height: 133px  
+  }
 }
 
+.new_message{
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+}
 
 .form{
   background-color: #ddd;
@@ -90,18 +101,18 @@
   padding: 20px 50px 20px 40px;
   &__message{
     width: calc(100% - 150px);
-    float: left;
     border: none;
     height: 50px;
+    padding-left: 10px;
   }
   &__mask{
     background-color: $whi;
-    float: left;
     height: 50px;
     padding-right: 10px;
-    &__image{
-      font-size: 20px;
+    &__icon{
+      font-size: 1.3rem;
       line-height: 50px;
+      cursor: pointer;
     }
     &__hidden{
       display: none;
@@ -121,20 +132,7 @@
   }
 }
 
-.icon{
-  font-size: 1.3rem;
-  line-height: 50px;
-  right: 10px;
- 
-  cursor: pointer;
-}
 
-.new_message{
-  margin-left: 10px;
-  display: flex;
-  height: 50px;
-  line-height: 50px;
-}
 .input-box{
   display: flex;
   position: relative;
@@ -158,5 +156,4 @@
   margin: 0;
   padding:0;
 }
-
 
