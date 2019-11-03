@@ -1,34 +1,28 @@
 $(function(){
   function buildHTML(message){
-    if (message.content &&  message.image.url){
-      var html_contents = 
-        '<p class="lower-message__content">' +
-          message.content +
-        '</p>' +
-        '<img scr="' + message.image.url + '" class="lower-message__image" >'
-    }else if(message.content){
-      var html_contents =
-        '<p class="lower-message__content">' +
-          message.content +
-        '</p>'
-    }else if(message.image.url){
-      var html_contents =
-        '<img scr="' + message.image.url + '" class="lower-message__image" >'
-    };
-    var html =
-      '<div class="message" data-id=' + message.id + '>' +
-        '<div class="upper-message">' +
-          '<div class="upper-message__user-name">' +
-            message.user_name  +
-          '</div>' +
-          '<div class="upper-message__date">' +
-            message.created_at +
-          '</div>' +
-        '</div>' +
-        '<div class="lower-message">' +
-          html_contents +
-        '</div>' +
-      '</div>'  
+    var html_image = message.image ? `
+      <img src = "${message.image}", class = "lower-message__pict">
+      ` : ""
+    var html_content = message.content ? `
+        <p class="lower-message__content">
+          ${message.content}
+        </p>
+        ` : ""
+    var html =`
+      <div class="message" data-id=' + message.id + '>
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          ${html_content}
+          ${html_image}
+        </div>
+      </div>`
     return html;
   };
   $('.new_message').on('submit', function(e){
