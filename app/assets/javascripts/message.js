@@ -8,8 +8,8 @@ $(function(){
           ${message.content}
         </p>
         ` : ""
-    var html =`
-      <div class="message" data-id=${message.id}>
+    var html =
+      `<div class="message" data-id=${message.id}>
         <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name}
